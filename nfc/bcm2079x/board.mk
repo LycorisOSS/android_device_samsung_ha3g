@@ -14,12 +14,5 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/ha3g
-
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ha3g.mk
-
-COMMON_LUNCH_CHOICES := \
-    lineage_ha3g-user \
-    lineage_ha3g-userdebug \
-    lineage_ha3g-eng
+# NFC
+include device/samsung/ha3g/nfc/board.mk

@@ -1,5 +1,5 @@
-#
-# Copyright (C) 2018 The LineageOS Project
+# Copyright 2016 The CyanogenMod Project
+# Copyright 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +14,4 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/ha3g
-
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ha3g.mk
-
-COMMON_LUNCH_CHOICES := \
-    lineage_ha3g-user \
-    lineage_ha3g-userdebug \
-    lineage_ha3g-eng
+include $(call first-makefiles-under,$(call my-dir))

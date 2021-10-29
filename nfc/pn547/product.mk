@@ -14,12 +14,14 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/ha3g
+# NFC
+$(call inherit-product, device/samsung/ha3g/nfc/product.mk)
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ha3g.mk
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
+    libpn547_fw \
+ nfc_nci.bcm2079x.universal5420
 
-COMMON_LUNCH_CHOICES := \
-    lineage_ha3g-user \
-    lineage_ha3g-userdebug \
-    lineage_ha3g-eng
+PRODUCT_COPY_FILES += \
+    device/samsung/ha3g/nfc/pn547/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
+    device/samsung/ha3g/nfc/pn547/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
