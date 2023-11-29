@@ -56,6 +56,9 @@ BOARD_MODEM_TYPE := xmm6360
 -include vendor/samsung/ha3g/BoardConfigVendor.mk
 
 # NFC
-BOARD_HAVE_NFC := true 
+BOARD_HAVE_NFC := true
 BOARD_NFC_HAL_SUFFIX := universal5420
  -include device/samsung/ha3g/nfc/bcm2079x/board.mk
+
+# Vendor Security patch level
+VENDOR_SECURITY_PATCH := 2020-11-01
